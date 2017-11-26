@@ -5,6 +5,10 @@
  */
 package home;
 
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+
 /**
  *
  * @author root
@@ -27,22 +31,313 @@ public class Frame2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        continueBtn = new javax.swing.JButton();
+        plusAccount = new javax.swing.JButton();
+        giverCpr = new javax.swing.JLabel();
+        giverName = new javax.swing.JLabel();
+        giverAddress = new javax.swing.JLabel();
+        recieverCpr = new javax.swing.JLabel();
+        recieverName = new javax.swing.JLabel();
+        p1Cpr = new javax.swing.JLabel();
+        p1Name = new javax.swing.JLabel();
+        p1Adrs = new javax.swing.JLabel();
+        p2Cpr = new javax.swing.JLabel();
+        p2Name = new javax.swing.JLabel();
+        p2Adrs = new javax.swing.JLabel();
+        selectedAccount = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 153, 255));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("Giver Information");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("CPR Number :");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Giver Name :");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("Address :");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel5.setText("Reciever Information");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("CPR Number :");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setText("Name :");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("CPR Number :");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("Parent1");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setText("Name :");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setText("Address :");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setText("Parent 2");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setText("CPR Number :");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setText("Name :");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setText("Address :");
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setText("Customer Selected Account :");
+
+        continueBtn.setBackground(new java.awt.Color(255, 204, 204));
+        continueBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        continueBtn.setText("Continue");
+        continueBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continueBtnActionPerformed(evt);
+            }
+        });
+
+        plusAccount.setBackground(new java.awt.Color(153, 255, 153));
+        plusAccount.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        plusAccount.setText("Suggest Danske Gave Plus");
+        plusAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plusAccountActionPerformed(evt);
+            }
+        });
+
+        giverCpr.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        giverName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        giverAddress.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        recieverCpr.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        recieverName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        p1Cpr.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        p1Name.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        p1Adrs.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        p2Cpr.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        p2Name.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        p2Adrs.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        selectedAccount.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(giverCpr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(recieverCpr)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(giverAddress)
+                                        .addComponent(giverName))
+                                    .addComponent(recieverName)
+                                    .addComponent(p1Cpr)
+                                    .addComponent(p1Name)
+                                    .addComponent(p1Adrs)
+                                    .addComponent(p2Cpr)
+                                    .addComponent(p2Name)
+                                    .addComponent(p2Adrs))
+                                .addGap(0, 329, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addGap(18, 18, 18)
+                                .addComponent(selectedAccount))
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel15))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(plusAccount)
+                .addGap(42, 42, 42)
+                .addComponent(continueBtn)
+                .addGap(52, 52, 52))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(giverCpr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(giverName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(giverAddress))
+                .addGap(27, 27, 27)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(recieverCpr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(recieverName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(p1Cpr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(p1Name))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(p1Adrs))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(p2Cpr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(p2Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(p2Adrs))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(selectedAccount))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(continueBtn)
+                    .addComponent(plusAccount))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
+        setVisible(false);
+        Frame4 fr4 = new Frame4();
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice defaultScreen = ge.getDefaultScreenDevice();
+        Rectangle rect = defaultScreen.getDefaultConfiguration().getBounds();
+        int x = (int) rect.getMaxX() - fr4.getWidth();
+        int y = 0;
+        fr4.setTitle("Frame 4");
+        fr4.setLocation(x, y);
+        fr4.setAlwaysOnTop(true);
+        fr4.setVisible(true);
+    }//GEN-LAST:event_continueBtnActionPerformed
+
+    private void plusAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusAccountActionPerformed
+        setVisible(false);
+        Frame3 fr3 = new Frame3();
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice defaultScreen = ge.getDefaultScreenDevice();
+        Rectangle rect = defaultScreen.getDefaultConfiguration().getBounds();
+        int x = (int) rect.getMaxX() - fr3.getWidth();
+        int y = 0;
+        fr3.setTitle("Message for Customer");
+        fr3.setLocation(x, y);
+        fr3.setCustomerMsg();
+        fr3.setAlwaysOnTop(true);
+        fr3.setVisible(true);
+    }//GEN-LAST:event_plusAccountActionPerformed
+
+    public void setGiverInfo(String cpr, String name, String address) {
+        giverCpr.setText(cpr);
+        giverName.setText(name);
+        giverAddress.setText(address);
+    }
+    
+    public void setRecieverInfo(String rCcpr, String rCname, String p1cpr, String p1Nme, String p1adrs, String p2cpr, String p2name, String p2adrs) {
+        recieverCpr.setText(rCcpr);
+        recieverName.setText(rCname);
+        p1Cpr.setText(p1cpr);
+        p1Name.setText(p1Nme);
+        p1Adrs.setText(p1adrs);
+        p2Cpr.setText(p2cpr);
+        p2Name.setText(p2name);
+        p2Adrs.setText(p2adrs);
+    }
+    
+    public void showHidePlusAcountBtn(String account) {
+        selectedAccount.setText(account);
+        if("Danske Gave Plus".equals(account)) {
+            plusAccount.setVisible(true);
+        }
+        if("Danske Gave".equals(account)) {
+            plusAccount.setVisible(false);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -55,5 +350,35 @@ public class Frame2 extends javax.swing.JFrame {
     }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton continueBtn;
+    private javax.swing.JLabel giverAddress;
+    private javax.swing.JLabel giverCpr;
+    private javax.swing.JLabel giverName;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel p1Adrs;
+    private javax.swing.JLabel p1Cpr;
+    private javax.swing.JLabel p1Name;
+    private javax.swing.JLabel p2Adrs;
+    private javax.swing.JLabel p2Cpr;
+    private javax.swing.JLabel p2Name;
+    private javax.swing.JButton plusAccount;
+    private javax.swing.JLabel recieverCpr;
+    private javax.swing.JLabel recieverName;
+    private javax.swing.JLabel selectedAccount;
     // End of variables declaration//GEN-END:variables
 }

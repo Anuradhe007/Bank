@@ -8,6 +8,7 @@ package home;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
+import java.util.List;
 
 /**
  *
@@ -38,8 +39,13 @@ public class Frame1 extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Customer Request for an Account");
 
+        viewDetailBtn.setBackground(new java.awt.Color(153, 153, 255));
+        viewDetailBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         viewDetailBtn.setText("View Details");
         viewDetailBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,24 +57,22 @@ public class Frame1 extends javax.swing.JDialog {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(viewDetailBtn))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel1)))
-                .addContainerGap(85, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(viewDetailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(jLabel1)
-                .addGap(54, 54, 54)
-                .addComponent(viewDetailBtn)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(viewDetailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -95,6 +99,13 @@ public class Frame1 extends javax.swing.JDialog {
         int y = 0;
         f2.setTitle("Customer Details");
         f2.setLocation(x, y);
+        
+        ReadTextFile rtf = new ReadTextFile();
+        List<String> giverInfo = rtf.getGiverInfo();
+        List<String> recieverInfo = rtf.getRecieverInfo();
+        f2.setGiverInfo(giverInfo.get(0), giverInfo.get(1), giverInfo.get(2));
+        f2.setRecieverInfo(recieverInfo.get(0), recieverInfo.get(1), recieverInfo.get(2), recieverInfo.get(3), recieverInfo.get(4), recieverInfo.get(5), recieverInfo.get(6), recieverInfo.get(7));
+        f2.showHidePlusAcountBtn(rtf.getCustomerChosenAccount());
         f2.setAlwaysOnTop(true);
         f2.setVisible(true);
     }//GEN-LAST:event_viewDetailBtnActionPerformed
