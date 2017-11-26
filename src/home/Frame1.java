@@ -34,16 +34,16 @@ public class Frame1 extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        viewDetailBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Customer Request for an Account");
 
-        jButton1.setText("View Details");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        viewDetailBtn.setText("View Details");
+        viewDetailBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                viewDetailBtnActionPerformed(evt);
             }
         });
 
@@ -55,7 +55,7 @@ public class Frame1 extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jButton1))
+                        .addComponent(viewDetailBtn))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(81, 81, 81)
                         .addComponent(jLabel1)))
@@ -67,7 +67,7 @@ public class Frame1 extends javax.swing.JDialog {
                 .addGap(98, 98, 98)
                 .addComponent(jLabel1)
                 .addGap(54, 54, 54)
-                .addComponent(jButton1)
+                .addComponent(viewDetailBtn)
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
@@ -85,9 +85,10 @@ public class Frame1 extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void viewDetailBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDetailBtnActionPerformed
+        //setVisible(false);
+        
+    }//GEN-LAST:event_viewDetailBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,16 +132,17 @@ public class Frame1 extends javax.swing.JDialog {
                 Rectangle rect = defaultScreen.getDefaultConfiguration().getBounds();
                 int x = (int) rect.getMaxX() - dialog.getWidth();
                 int y = 0;
+                dialog.setTitle("Customer Request");
                 dialog.setLocation(x, y);
+                dialog.setAlwaysOnTop(true);
                 dialog.setVisible(true);
-               
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton viewDetailBtn;
     // End of variables declaration//GEN-END:variables
 }
