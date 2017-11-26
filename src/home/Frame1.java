@@ -87,6 +87,8 @@ public class Frame1 extends javax.swing.JDialog {
 
     private void viewDetailBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDetailBtnActionPerformed
         //setVisible(false);
+        Frame2 f2 = new Frame2();
+        f2.setVisible(true);
         
     }//GEN-LAST:event_viewDetailBtnActionPerformed
 
