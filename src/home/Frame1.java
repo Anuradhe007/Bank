@@ -5,6 +5,10 @@
  */
 package home;
 
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+
 /**
  *
  * @author Prabhath
@@ -122,8 +126,14 @@ public class Frame1 extends javax.swing.JDialog {
                         System.exit(0);
                     }
                 });
+                GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+                GraphicsDevice defaultScreen = ge.getDefaultScreenDevice();
+                Rectangle rect = defaultScreen.getDefaultConfiguration().getBounds();
+                int x = (int) rect.getMaxX() - dialog.getWidth();
+                int y = 0;
+                dialog.setLocation(x, y);
                 dialog.setVisible(true);
-                dialog.setLocation(100, 100);
+               
             }
         });
     }
