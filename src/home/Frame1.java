@@ -86,10 +86,17 @@ public class Frame1 extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewDetailBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDetailBtnActionPerformed
-        //setVisible(false);
+        setVisible(false);
         Frame2 f2 = new Frame2();
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice defaultScreen = ge.getDefaultScreenDevice();
+        Rectangle rect = defaultScreen.getDefaultConfiguration().getBounds();
+        int x = (int) rect.getMaxX() - f2.getWidth();
+        int y = 0;
+        f2.setTitle("Customer Details");
+        f2.setLocation(x, y);
+        f2.setAlwaysOnTop(true);
         f2.setVisible(true);
-        
     }//GEN-LAST:event_viewDetailBtnActionPerformed
 
     /**
